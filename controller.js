@@ -14,9 +14,11 @@ const { Pool, Client } = require("pg");
 //local db
 const pool = new Pool({
   user: "movie_user",
+  // user: "movie_user",
   host: "localhost",
+  // database: "movie_database",
   database: "movie_database",
-  password: "root",
+  password: "",
   port: 5432,
 });
 

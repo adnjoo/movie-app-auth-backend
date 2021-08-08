@@ -14,4 +14,6 @@ CREATE TABLE users(
 -- select * from users;
 
 insert into users (user_name, user_email, user_password)
-values ('andrew', 'andrew@gmail.com', 'password');
+values 
+('bob', 'bob@gmail.com', 'password'),
+('cindy', 'cindy@gmail.com', 'password');
