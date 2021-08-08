@@ -63,6 +63,7 @@ router.post("/login", validInfo, async (req, res) => {
     }
 
     //4. give them the jwt token
+    console.log('test')
 
     const token = jwtGenerator(user.rows[0].user_id);
 
@@ -70,6 +71,7 @@ router.post("/login", validInfo, async (req, res) => {
   } catch (err) {
     // console.log('test3')
     console.error(err.message);
+    console.log(err)
     res.status(500).send("Server error");
   }
 });
