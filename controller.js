@@ -1,24 +1,24 @@
-console.log(require('dotenv').config())
-require("dotenv").config();
+// console.log(require('dotenv').config())
+// require("dotenv").config();
 
 //import postgres
 const { Pool, Client } = require("pg");
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+// });
 
 //local db
-// const pool1 = new Pool({
-//   user: "movie_user",
-//   host: "localhost",
-//   database: "movie_database",
-//   password: "root",
-//   port: 5432,
-// });
+const pool = new Pool({
+  user: "movie_user",
+  host: "localhost",
+  database: "movie_database",
+  password: "root",
+  port: 5432,
+});
 
 //get movies
 function getMovies(req, res) {

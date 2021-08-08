@@ -29,9 +29,12 @@ app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });
 
+//register and login routes
+// app.use('/auth', require('./auth-routes/jwtAuth'))
 
+//dashboard route
 
-
+// app.use('/dashboard', require('./auth-routes/dashboard'))
 
 
 //help

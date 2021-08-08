@@ -4,9 +4,8 @@ description:
 
 [Deployment](https://andrew-movie-app.herokuapp.com/)
 
-Backend technology:
+Tech used: node , pg, cors, express, dotenv
 
-- Node (live server) 
-- Express (server-endpoints) 
-- Postgres (SQL database) 
-- Heroku (deployment)
+Authorization: jsonwebtoken, bcrypt
+
+08-07-21 try to make user-auth endpoints
