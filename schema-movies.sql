@@ -3,7 +3,8 @@
 -- create table
 create table movies (
   id serial primary key,
-  name varchar(64)
+  name varchar(255),
+  user_id varchar(255)
 );
 
 --  insert example

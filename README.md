@@ -12,4 +12,7 @@ Authorization: jsonwebtoken, bcrypt
 
 Endpoints: / get
 
-asd
+## instructions
+```
+nodemon server
+```

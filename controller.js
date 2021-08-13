@@ -1,32 +1,16 @@
-console.log(require('dotenv').config())
-require("dotenv").config();
+const router = require("express").Router();
+const pool = require("./db");
+const validInfo = require("./auth-middleware/validInfo");
+const authorization = require("./auth-middleware/authorization");
 
-//import postgres
-const { Pool, Client } = require("pg");
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
-
-//local db
-// const pool = new Pool({
-//   user: "movie_user",
-//   // user: "movie_user",
-//   host: "localhost",
-//   // database: "movie_database",
-//   database: "movie_database",
-//   password: "",
-//   port: 5432,
-// });
+// disable this to work locally
+// console.log(require('dotenv').config())
+// require("dotenv").config();
 
 //get movies
 function getMovies(req, res) {
   let movies;
   console.log(req.body);
-
   pool
     .query("select * from movies;")
     .then((results) => {
@@ -40,8 +24,9 @@ function getMovies(req, res) {
 function addMovie(req, res) {
   let movies;
   // console.log(req.body);
+  console.log(req.body.user_id);
   pool
-    .query("insert into movies (name) values ($1);",[req.body.movie])
+    .query("insert into movies (name) values ($1);", [req.body.movie])
     .then((results) => {
       movies = results;
       res.status(200).send(movies);
@@ -54,7 +39,7 @@ function deleteMovie(req, res) {
   let movie;
   console.log(req.body);
   pool
-    .query("delete from movies where id = $1;",[req.body.id])
+    .query("delete from movies where id = $1;", [req.body.id])
     .then((results) => {
       movie = results;
       res.status(200).send(movie);
@@ -67,7 +52,10 @@ function editMovie(req, res) {
   let movie;
   console.log(req.body);
   pool
-    .query("update movies set name = $1 where id = $2;",[req.body.name, req.body.id])
+    .query("update movies set name = $1 where id = $2;", [
+      req.body.name,
+      req.body.id,
+    ])
     .then((results) => {
       movie = results;
       res.status(200).send(movie);

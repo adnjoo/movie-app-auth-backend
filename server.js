@@ -13,7 +13,7 @@ app.use(express.json()); // Recognize Request Objects as JSON objects
 
 
 //add a movie
-app.post("/", controller.addMovie);
+// app.post("/", controller.addMovie);
 
 //get the movie
 app.get("/", controller.getMovies);
@@ -36,6 +36,8 @@ app.use('/auth', require('./auth-routes/jwtAuth'))
 
 app.use('/dashboard', require('./auth-routes/dashboard'))
 
+//new routes
+app.use('/', require('./controller2'))
 
 //help
 //https://medium.com/dataseries/add-timeout-capability-to-express-apps-with-connect-timeout-fce06d76e07a
