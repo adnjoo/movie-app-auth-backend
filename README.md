@@ -26,3 +26,9 @@ change to local in db.js
 
 turn on above in controller.js
 change to heroku/prod in db.js 
+push to heroku using 
+```
+git add . 
+git commit -m "b"
+git push heroku main
+```
