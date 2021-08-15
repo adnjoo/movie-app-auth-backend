@@ -5,7 +5,7 @@ const authorization = require("./auth-middleware/authorization");
 
 // disable this to work locally
 // console.log(require('dotenv').config())
-// require("dotenv").config();
+require("dotenv").config();
 
 //get movies
 function getMovies(req, res) {

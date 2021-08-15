@@ -16,3 +16,11 @@ Endpoints: / get
 ```
 nodemon server
 ```
+
+### local / dev
+
+turn off `require("dotenv").config();` in controller.js
+
+### prod 
+
+turn on above
