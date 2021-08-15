@@ -20,7 +20,9 @@ nodemon server
 ### local / dev
 
 turn off `require("dotenv").config();` in controller.js
+change to local in db.js 
 
 ### prod 
 
-turn on above
+turn on above in controller.js
+change to heroku/prod in db.js 
