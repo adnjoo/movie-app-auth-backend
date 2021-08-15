@@ -33,7 +33,6 @@ app.listen(port, () => {
 app.use('/auth', require('./auth-routes/jwtAuth'))
 
 //dashboard route
-
 app.use('/dashboard', require('./auth-routes/dashboard'))
 
 //new routes
