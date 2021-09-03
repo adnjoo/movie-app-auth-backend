@@ -21,20 +21,22 @@ nodemon server
 ### dev
 
 turn off `require("dotenv").config();` in controller.js
-change to local in db.js 
+change to local in db.js
 
-### prod 
+### prod
 
 turn on above in controller.js
-change to heroku/prod in db.js 
-push to heroku using 
+change to heroku/prod in db.js
+push to heroku using
+
 ```
-git add . 
+git add .
 git commit -m "b"
 git push heroku main
 ```
 
 ### env variables
+
 PORT=4001
-DATABASE_URL=postgres:***
-jwtSecret = ***
+DATABASE_URL=postgres:**_
+jwtSecret = _**
