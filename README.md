@@ -1,6 +1,6 @@
 ## backend
 
-> this back-end application saves/sends data to/from a postgres db.
+> this back-end application communicates data to/from a postgres db.
 
 ## [Deployment](https://polar-waters-71760.herokuapp.com/)
 
