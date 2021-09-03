@@ -32,3 +32,8 @@ git add .
 git commit -m "b"
 git push heroku main
 ```
+
+### env variables
+PORT=4001
+DATABASE_URL=postgres:***
+jwtSecret = ***
