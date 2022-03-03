@@ -1,9 +1,9 @@
 -- DB Schema
 -- create table
 CREATE TABLE movies (
-  id serial PRIMARY KEY,
-  name varchar(255),
-  user_id varchar(255)
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  user_id VARCHAR(255)
 );
 
 --  insert example
