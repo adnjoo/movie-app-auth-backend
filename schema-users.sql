@@ -1,7 +1,6 @@
 CREATE DATABASE jwttutorial;
 
 -- create extension if not exists "uuid-ossp";
-
 --set extension
 CREATE TABLE users(
     user_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -12,8 +11,8 @@ CREATE TABLE users(
 
 -- \x off;
 -- select * from users;
-
-insert into users (user_name, user_email, user_password)
-values 
-('bob', 'bob@gmail.com', 'password'),
-('cindy', 'cindy@gmail.com', 'password');
+INSERT INTO
+    users (user_name, user_email, user_password)
+VALUES
+    ('bob', 'bob@gmail.com', 'password'),
+    ('cindy', 'cindy@gmail.com', 'password');
