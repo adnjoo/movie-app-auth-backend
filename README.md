@@ -43,5 +43,7 @@ git push heroku main
 ### Env variables
 
 PORT=4001
+
 DATABASE_URL=postgres:**_
+
 jwtSecret = _**
